@@ -1,0 +1,4 @@
+Windows Registry Editor Version 5.00
+ 
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Adobe\Adobe Acrobat\DC\Activation]
+"IsAMTEnforced"=dword:00000001

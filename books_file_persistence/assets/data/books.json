@@ -1,0 +1,83 @@
+[
+  {
+    "id": 1,
+    "title": "El Principito",
+    "author": "Antoine de Saint-Exupéry",
+    "genre": "Fábula",
+    "read": true,
+    "description": "Un joven príncipe viaja por distintos planetas y aprende lecciones sobre la vida, la amistad y el amor.",
+    "imagePath": "assets/images/el_principito.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Cien años de soledad",
+    "author": "Gabriel García Márquez",
+    "genre": "Realismo mágico",
+    "read": false,
+    "description": "La historia de la familia Buendía a lo largo de varias generaciones en Macondo, entre el amor, la soledad y el destino.",
+    "imagePath": "assets/images/cien_anos_de_soledad.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Don Quijote de la Mancha",
+    "author": "Miguel de Cervantes",
+    "genre": "Clásico",
+    "read": false,
+    "description": "Un hidalgo, acompañado de su escudero Sancho Panza, sale en busca de aventuras para revivir la caballería y luchar contra la injusticia.",
+    "imagePath": "assets/images/don_quijote.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Harry Potter y la piedra filosofal",
+    "author": "J.K. Rowling",
+    "genre": "Fantasía",
+    "read": true,
+    "description": "Un joven descubre que es mago y comienza sus estudios en Hogwarts, donde encuentra amigos, misterios y peligros.",
+    "imagePath": "assets/images/harry_potter.jpg"
+  },
+  {
+    "id": 5,
+    "title": "El Señor de los Anillos",
+    "author": "J.R.R. Tolkien",
+    "genre": "Fantasía",
+    "read": false,
+    "description": "Frodo Bolsón y sus compañeros emprenden un viaje para destruir el Anillo Único y salvar la Tierra Media.",
+    "imagePath": "assets/images/el_senor_de_los_anillos.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Crimen y castigo",
+    "author": "Fiódor Dostoyevski",
+    "genre": "Novela psicológica",
+    "read": true,
+    "description": "Raskólnikov, un estudiante en San Petersburgo, comete un asesinato y enfrenta la culpa y la búsqueda de redención.",
+    "imagePath": "assets/images/crimen_y_castigo.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Orgullo y prejuicio",
+    "author": "Jane Austen",
+    "genre": "Romance",
+    "read": false,
+    "description": "Elizabeth Bennet y el señor Darcy superan sus prejuicios en una historia sobre el amor, la clase social y los malentendidos.",
+    "imagePath": "assets/images/orgullo_y_prejuicio.jpg"
+  },
+  {
+    "id": 8,
+    "title": "La Odisea",
+    "author": "Homero",
+    "genre": "Épica",
+    "read": false,
+    "description": "Tras la guerra de Troya, Ulises emprende un largo regreso a casa lleno de desafíos, monstruos y dioses.",
+    "imagePath": "assets/images/la_odisea.jpg"
+  },
+  {
+    "id": 9,
+    "title": "Los Juegos del Hambre",
+    "author": "Suzanne Collins",
+    "genre": "Distopía",
+    "read": true,
+    "description": "Katniss Everdeen se ofrece como tributo en unos juegos mortales transmitidos por televisión y lucha por sobrevivir.",
+    "imagePath": "assets/images/los_juegos_del_hambre.jpg"
+  }
+]

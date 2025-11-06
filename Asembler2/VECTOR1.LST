@@ -1,0 +1,131 @@
+Microsoft (R) Macro Assembler Version 5.10                  5/12/11 04:56:15
+                                                             Page     1-1
+
+
+       1					.MODEL	SMALL
+       2					.386
+       3					.STACK
+       4					.DATA
+       5 0000  000A[			VECTOR	DB	10 DUP('*'),'$'
+       6	   2A			
+       7			 ]	
+       8       24			
+       9				;VECTOR  DB      'ERDFTGHJUI$'
+      10				;VECTOR  DB      '$$**+',01H,1BH,2H,0DH
+					,3BH
+      11 000B  0A 0D 43 4F 4E 54	M1	DB	10,13,'CONTENIDO INICIA
+					L DEL VECTOR: $'
+      12       45 4E 49 44 4F 20	
+      13       49 4E 49 43 49 41	
+      14       4C 20 44 45 4C 20	
+      15       56 45 43 54 4F 52	
+      16       3A 20 24			
+      17 002C  0A 0A 0D 49 4E 47	M2      DB      10,10,13,'INGRESE 10 CA
+					RACTERES: $'
+      18       52 45 53 45 20 31	
+      19       30 20 43 41 52 41	
+      20       43 54 45 52 45 53	
+      21       3A 20 24			
+      22 0047  0A 0A 0A 0D 43 4F	M3      DB      10,10,10,13,'CONTENIDO 
+					DESPUES DE INGRESO: $'
+      23       4E 54 45 4E 49 44	
+      24       4F 20 44 45 53 50	
+      25       55 45 53 20 44 45	
+      26       20 49 4E 47 52 45	
+      27       53 4F 3A 20 24		
+      28				
+      29					.CODE
+      30 0000					ORG	0000
+      31 0000  EB 28 90				JMP	MAIN
+      32				
+      33 0003  B8 ---- R		INICIO:	MOV	AX,@DATA
+      34 0006  8E D8				MOV	DS,AX
+      35 0008  C3				RET
+      36				
+      37 0009				VIS_MENS:
+      38 0009  B4 09				MOV	AH,09H
+      39 000B  CD 21				INT	21H
+      40 000D  C3				RET
+      41				
+      42 000E				INGRESO:
+      43 000E  B4 01				MOV	AH,01H
+      44 0010  CD 21				INT	21H
+      45 0012  C3				RET
+      46				
+      47 0013				LLENAR_VECTOR:
+      48 0013  BE 0000				MOV	SI,0
+      49 0016  B9 000A				MOV	CX,10
+      50 0019  BA 002C R			MOV	DX,OFFSET M2
+Microsoft (R) Macro Assembler Version 5.10                  5/12/11 04:56:15
+                                                             Page     1-2
+
+
+      51 001C  E8 0009 R			CALL	VIS_MENS
+      52 001F  E8 000E R		CICLO:	CALL	INGRESO
+      53 0022  88 84 0000 R			MOV	VECTOR[SI],AL
+      54 0026  46				INC	SI
+      55 0027  E2 F6				LOOP	CICLO
+      56 0029  C3				RET
+      57				
+      58 002A  E8 0003 R		MAIN:	CALL	INICIO
+      59 002D  BA 000B R			MOV	DX,OFFSET M1
+      60 0030  E8 0009 R			CALL	VIS_MENS
+      61 0033  BA 0000 R			MOV	DX,OFFSET VECTOR
+      62 0036  E8 0009 R			CALL	VIS_MENS
+      63 0039  E8 0013 R			CALL	LLENAR_VECTOR
+      64 003C  BA 0047 R			MOV	DX,OFFSET M3
+      65 003F  E8 0009 R			CALL	VIS_MENS
+      66 0042  BA 0000 R			MOV	DX,OFFSET VECTOR
+      67 0045  E8 0009 R			CALL	VIS_MENS
+      68 0048  B4 4C				MOV	AH,4CH
+      69 004A  CD 21				INT	21H
+      70				
+      71					END
+Microsoft (R) Macro Assembler Version 5.10                  5/12/11 04:56:15
+                                                             Symbols-1
+
+
+Segments and Groups:
+
+                N a m e         	Size	Length	 Align	Combine Class
+
+DGROUP . . . . . . . . . . . . .  	GROUP
+  _DATA  . . . . . . . . . . . .  	16 Bit	006A	WORD	PUBLIC	'DATA'
+  STACK  . . . . . . . . . . . .  	16 Bit	0400	PARA	STACK	'STACK'
+_TEXT  . . . . . . . . . . . . .  	16 Bit	004C	WORD	PUBLIC	'CODE'
+
+Symbols:            
+
+                N a m e         	Type	 Value	 Attr
+
+CICLO  . . . . . . . . . . . . .  	L NEAR	001F	_TEXT
+
+INGRESO  . . . . . . . . . . . .  	L NEAR	000E	_TEXT
+INICIO . . . . . . . . . . . . .  	L NEAR	0003	_TEXT
+
+LLENAR_VECTOR  . . . . . . . . .  	L NEAR	0013	_TEXT
+
+M1 . . . . . . . . . . . . . . .  	L BYTE	000B	_DATA
+M2 . . . . . . . . . . . . . . .  	L BYTE	002C	_DATA
+M3 . . . . . . . . . . . . . . .  	L BYTE	0047	_DATA
+MAIN . . . . . . . . . . . . . .  	L NEAR	002A	_TEXT
+
+VECTOR . . . . . . . . . . . . .  	L BYTE	0000	_DATA	Length = 000A
+VIS_MENS . . . . . . . . . . . .  	L NEAR	0009	_TEXT
+
+@CODE  . . . . . . . . . . . . .  	TEXT  _TEXT		
+@CODESIZE  . . . . . . . . . . .  	TEXT  0		
+@CPU . . . . . . . . . . . . . .  	TEXT  3343		
+@DATASIZE  . . . . . . . . . . .  	TEXT  0		
+@FILENAME  . . . . . . . . . . .  	TEXT  VECTOR1		
+@VERSION . . . . . . . . . . . .  	TEXT  510		
+
+
+     54 Source  Lines
+     54 Total   Lines
+     27 Symbols
+
+  45990 + 323398 Bytes symbol space free
+
+      0 Warning Errors
+      0 Severe  Errors

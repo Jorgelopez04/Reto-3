@@ -1,0 +1,44 @@
+<DriverInfo>
+	<ProductInfo>
+		<Name>Adobe Photoshop</Name>
+		<SAPCode>PHSP</SAPCode>
+		<CodexVersion>21.0.2</CodexVersion>
+		<Platform>win64</Platform>
+		<EsdDirectory>./PHSP</EsdDirectory>
+		<Dependencies>
+			<Dependency>
+				<SAPCode>ACR</SAPCode>
+				<BaseVersion>9.6</BaseVersion>
+				<EsdDirectory>./ACR</EsdDirectory>
+			</Dependency>
+			<Dependency>
+				<SAPCode>COCM</SAPCode>
+				<BaseVersion>1.0</BaseVersion>
+				<EsdDirectory>./COCM</EsdDirectory>
+			</Dependency>
+			<Dependency>
+				<SAPCode>CORG</SAPCode>
+				<BaseVersion>1.0</BaseVersion>
+				<EsdDirectory>./CORG</EsdDirectory>
+			</Dependency>
+			<Dependency>
+				<SAPCode>CCXP</SAPCode>
+				<BaseVersion>2.2.1</BaseVersion>
+				<EsdDirectory>./CCXP</EsdDirectory>
+			</Dependency>
+			<Dependency>
+				<SAPCode>COPS</SAPCode>
+				<BaseVersion>1.0</BaseVersion>
+				<EsdDirectory>./COPS</EsdDirectory>
+			</Dependency>
+			<Dependency>
+				<SAPCode>CORE</SAPCode>
+				<BaseVersion>1.0</BaseVersion>
+				<EsdDirectory>./CORE</EsdDirectory>
+			</Dependency>
+		</Dependencies>
+	</ProductInfo>
+	<RequestInfo>
+		<InstallDir>C:\Program Files\Adobe</InstallDir>
+	</RequestInfo>
+</DriverInfo>

@@ -1,0 +1,17 @@
+<package_installation_info version="2.0">	
+<packageid>A2C19FFD-7786-4205-B5F2-DF9DFF7E27BD</packageid> 
+                                                                                     	<name>Core</name>
+<version>5.0.0.354</version>
+	<target_location>/Core/</target_location>
+	<packages>
+		<pimaInfo>
+			<packagetype>zip</packagetype> 
+			<name>Core</name>
+			<assets_size>2461808</assets_size> 	
+			<validation_info>
+				<validation_xml>PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48VmFsaWRhdGlvbkluZm8+PEZpbGU+PEluc3RhbGxQYXRoPkFkb2JlUElNLmRsbDwvSW5zdGFsbFBhdGg+PFNpZ25hdHVyZVR5cGU+RGlnaXRhbFNpZ25hdHVyZTwvU2lnbmF0dXJlVHlwZT48U2lnbmF0dXJlSW5mbz5BZG9iZSBJbmMue3x9RGlnaUNlcnQgRVYgQ29kZSBTaWduaW5nIENBIChTSEEyKXt8fURpZ2lDZXJ0IEhpZ2ggQXNzdXJhbmNlIEVWIFJvb3QgQ0E8L1NpZ25hdHVyZUluZm8+PC9GaWxlPjxGaWxlPjxJbnN0YWxsUGF0aD5Db3JlLmRsbDwvSW5zdGFsbFBhdGg+PFNpZ25hdHVyZVR5cGU+RGlnaXRhbFNpZ25hdHVyZTwvU2lnbmF0dXJlVHlwZT48U2lnbmF0dXJlSW5mbz5BZG9iZSBJbmMue3x9RGlnaUNlcnQgRVYgQ29kZSBTaWduaW5nIENBIChTSEEyKXt8fURpZ2lDZXJ0IEhpZ2ggQXNzdXJhbmNlIEVWIFJvb3QgQ0E8L1NpZ25hdHVyZUluZm8+PC9GaWxlPjwvVmFsaWRhdGlvbkluZm8+</validation_xml>
+				<sig>SY1gAV4CQa5AxyVFMogIyYQpLe5b1KJ1XX7iy7ds8mOjZ+ovuNE04VvXFTF6Tuff8R5eTT5W6I/7UGtzBQC2SmdbyrOK5oBiIyLkDe6/o/oAjIeKiIJbVjN2YLjO+WHCjNBcbdcaFZ7PsW0MPq1ZubpcHAbIzFs46FEaShvwR81I4QE4lYGVfRk1d0hKMu8ZcncsFYKqedViAm4B6coLckq+MWTh86xXBVtghvX4HZ0mRO8cTXqOFQQSp6d8C6EaofrHvGS6vN7rdfy6ZE9gZtXrv7GEL8mt6G5U3cg9+w26KwcG7cXj7OGl1JqGXN+3fwtF6VVqeVVTzS9X+KXed6GjaTnRpxmZ4lc/OEQbRoSX3YXaEoBlgOuZ5uTSqmNIZhglpjUH+wG42vX/kUyBG4/3cxYipH6BafBtH7LzcSB9f7Fc/SitrE7CXYLqNSzgKzoOGerC6CrxF7HPPAoXGtBAfJy1oC9uU9gTfWvL5K0DYtQ9DSRcpCNkIHAWK7HL</sig>
+			</validation_info>
+		</pimaInfo>
+	</packages>
+</package_installation_info>

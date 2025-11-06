@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Arial', sans-serif;
+        }
+
+        .calculadora {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            width: 320px;
+        }
+
+        .titulo {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .pantalla {
+            background: #222;
+            color: #00ff00;
+            font-size: 32px;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: right;
+            margin-bottom: 20px;
+            min-height: 60px;
+            word-wrap: break-word;
+            word-break: break-all;
+            font-family: 'Courier New', monospace;
+        }
+
+        .botones {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        button {
+            padding: 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .numero {
+            background: #f0f0f0;
+            color: #333;
+        }
+
+        .numero:hover {
+            background: #e0e0e0;
+            transform: scale(1.05);
+        }
+
+        .numero:active {
+            transform: scale(0.95);
+        }
+
+        .operador {
+            background: #667eea;
+            color: white;
+        }
+
+        .operador:hover {
+            background: #5568d3;
+            transform: scale(1.05);
+        }
+
+        .operador:active {
+            transform: scale(0.95);
+        }
+
+        .igual {
+            background: #00c853;
+            color: white;
+            grid-column: span 2;
+        }
+
+        .igual:hover {
+            background: #00a835;
+            transform: scale(1.05);
+        }
+
+        .igual:active {
+            transform: scale(0.95);
+        }
+
+        .limpiar {
+            background: #ff6b6b;
+            color: white;
+            grid-column: span 2;
+        }
+
+        .limpiar:hover {
+            background: #ff5252;
+            transform: scale(1.05);
+        }
+
+        .limpiar:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body>
+    <div class="calculadora">
+        <div class="titulo">Calculadora</div>
+        <div class="pantalla" id="pantalla">0</div>
+        <div class="botones">
+            <button class="limpiar" onclick="limpiar()">C</button>
+            <button class="operador" onclick="agregarOperador('/')">÷</button>
+            <button class="operador" onclick="agregarOperador('*')">×</button>
+            
+            <button class="numero" onclick="agregarNumero('7')">7</button>
+            <button class="numero" onclick="agregarNumero('8')">8</button>
+            <button class="numero" onclick="agregarNumero('9')">9</button>
+            <button class="operador" onclick="agregarOperador('-')">−</button>
+            
+            <button class="numero" onclick="agregarNumero('4')">4</button>
+            <button class="numero" onclick="agregarNumero('5')">5</button>
+            <button class="numero" onclick="agregarNumero('6')">6</button>
+            <button class="operador" onclick="agregarOperador('+')">+</button>
+            
+            <button class="numero" onclick="agregarNumero('1')">1</button>
+            <button class="numero" onclick="agregarNumero('2')">2</button>
+            <button class="numero" onclick="agregarNumero('3')">3</button>
+            <button class="operador" onclick="agregarNumero('.')">.</button>
+            
+            <button class="numero" onclick="agregarNumero('0')" style="grid-column: span 2;">0</button>
+            <button class="igual" onclick="calcular()">=</button>
+            <button class="operador" onclick="borrarUltimo()">←</button>
+        </div>
+    </div>
+
+    <script src="personas.controller.js"></script>
+    <script>
+        let pantalla = document.getElementById('pantalla');
+        let expresion = '';
+
+        function agregarNumero(num) {
+            expresion += num;
+            actualizarPantalla();
+        }
+
+        function agregarOperador(op) {
+            if (expresion && !isNaN(expresion[expresion.length - 1])) {
+                expresion += op;
+                actualizarPantalla();
+            }
+        }
+
+        function actualizarPantalla() {
+            pantalla.textContent = expresion || '0';
+        }
+
+        function calcular() {
+            try {
+                let resultado = eval(expresion);
+                expresion = resultado.toString();
+                actualizarPantalla();
+            } catch (error) {
+                pantalla.textContent = 'Error';
+                expresion = '';
+            }
+        }
+
+        function limpiar() {
+            expresion = '';
+            actualizarPantalla();
+        }
+
+        function borrarUltimo() {
+            expresion = expresion.slice(0, -1);
+            actualizarPantalla();
+        }
+    </script>
+</body>
+</html>
