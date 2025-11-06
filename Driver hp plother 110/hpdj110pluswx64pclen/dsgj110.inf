@@ -1,0 +1,139 @@
+
+[Version]
+Signature="$Windows NT$"
+Provider=Hewlett-Packard
+ClassGUID={4D36E979-E325-11CE-BFC1-08002BE10318}
+Class=Printer
+CatalogFile=Dsgj110.cat
+DriverVer=09/09/2009,7.00
+
+[Manufacturer]
+"HP"=Designjet,NTamd64
+
+[Designjet.NTamd64]
+"HP Designjet 130"			=DJ130, LPTENUM\Hewlett-Packardhp_de0B54
+"HP Designjet 130"		  	=DJ130, USBPRINT\Hewlett-Packardhp_de0B54
+"HP Designjet 130nr"			=DJ130,LPTENUM\Hewlett-Packardhp_de790F
+"HP Designjet 130nr"			=DJ130,USBPRINT\Hewlett-Packardhp_de790F
+"HP Designjet 30"			=DJ30,LPTENUM\Hewlett-Packardhp_de00A0
+"HP Designjet 30"			=DJ30,USBPRINT\Hewlett-Packardhp_de00A0
+"HP Designjet 30n"			=DJ30,LPTENUM\Hewlett-Packardhp_de9CB1
+"HP Designjet 30n"			=DJ30,USBPRINT\Hewlett-Packardhp_de9CB1
+
+"HP Designjet 110plus"			=DJ110, LPTENUM\Hewlett-Packardhp_deAFBF
+"HP Designjet 110plus"		  	=DJ110, USBPRINT\Hewlett-Packardhp_deAFBF
+"HP Designjet 110plus nr"		=DJ110, LPTENUM\Hewlett-Packardhp_de8434
+"HP Designjet 110plus nr"		=DJ110, USBPRINT\Hewlett-Packardhp_de8434
+
+[Designjet]
+"HP Designjet 130"			=DJ130, LPTENUM\Hewlett-Packardhp_de0B54
+"HP Designjet 130"		  	=DJ130, USBPRINT\Hewlett-Packardhp_de0B54
+"HP Designjet 130nr"			=DJ130,LPTENUM\Hewlett-Packardhp_de790F
+"HP Designjet 130nr"			=DJ130,USBPRINT\Hewlett-Packardhp_de790F
+"HP Designjet 30"			=DJ30,LPTENUM\Hewlett-Packardhp_de00A0
+"HP Designjet 30"			=DJ30,USBPRINT\Hewlett-Packardhp_de00A0
+"HP Designjet 30n"			=DJ30,LPTENUM\Hewlett-Packardhp_de9CB1
+"HP Designjet 30n"			=DJ30,USBPRINT\Hewlett-Packardhp_de9CB1
+
+"HP Designjet 110plus"			=DJ110, LPTENUM\Hewlett-Packardhp_deAFBF
+"HP Designjet 110plus"	  		=DJ110, USBPRINT\Hewlett-Packardhp_deAFBF
+"HP Designjet 110plus nr"		=DJ110, LPTENUM\Hewlett-Packardhp_de8434
+"HP Designjet 110plus nr"		=DJ110, USBPRINT\Hewlett-Packardhp_de8434
+
+[DJ130]
+CopyFiles=DESIGNJET_FILES,LINK_MANAGER,QUITASOL_FILES,HELP_FILES_130,LANGUAGE_MONITOR,CONFIG_FILE_DJ130
+DataSection=DESIGNJET_DATA_DJ130
+LanguageMonitor=%LANGMON%
+
+[DJ30]
+CopyFiles=DESIGNJET_FILES,LINK_MANAGER,QUITASOL_FILES,HELP_FILES_130,LANGUAGE_MONITOR,CONFIG_FILE_DJ30
+DataSection=DESIGNJET_DATA_DJ30
+LanguageMonitor=%LANGMON%
+
+[DJ110]
+CopyFiles=DESIGNJET_FILES,LINK_MANAGER,QUITASOL_FILES,HELP_FILES_110,LANGUAGE_MONITOR,CONFIG_FILE_DJ110
+DataSection=DESIGNJET_DATA_DJ110
+LanguageMonitor=%LANGMON%
+
+[DESIGNJET_FILES]
+hpltdrv7.dll,hpltdrv7.dl_
+hpltume5.dll,hpltume5.dl_
+hpltui5.dll,hpltui5.dl_
+hpltumd5.dll,hpltumd5.dl_
+HPLTRPL9.EXE,HPLTRPL9.EX_
+HPLTRPL10.DLL,HPLTRPL10.DL_
+
+[LANGUAGE_MONITOR]
+HPLTLM5.DLL,HPLTLM5.DL_
+
+[CONFIG_FILE_DJ130]
+hpdj130.dat,hpdj130.da_
+
+[CONFIG_FILE_DJ30]
+hpdj30.dat,hpdj30.da_
+
+[CONFIG_FILE_DJ110]
+hpdj110.dat,hpdj110.da_
+
+[DESIGNJET_DATA_DJ130]
+DriverFile=hpltdrv7.dll
+DataFile=hpdj130.dat
+ConfigFile=hpltume5.dll
+HelpFile=HPGLRL11.chm
+
+[DESIGNJET_DATA_DJ30]
+DriverFile=hpltdrv7.dll
+DataFile=hpdj30.dat
+ConfigFile=hpltume5.dll
+HelpFile=HPGLRL11.chm
+
+[DESIGNJET_DATA_DJ110]
+DriverFile=hpltdrv7.dll
+DataFile=hpdj110.dat
+ConfigFile=hpltume5.dll
+HelpFile=HPGLRL12.chm
+
+[LINK_MANAGER]
+HPLTLNK2.EXE,HPLTLNK2.EX_
+
+[QUITASOL_FILES]
+hpltren7.exe,hpltren7.ex_
+hpltren8.dll,hpltren8.dl_
+
+[HELP_FILES_130]
+HPGLRL11.chm,HPGLRL11.ch_
+
+[HELP_FILES_110]
+HPGLRL12.chm,HPGLRL12.ch_
+
+[DestinationDirs]
+DefaultDestDir=66000
+LINK_MANAGER=66000
+LANGUAGE_MONITOR=66002
+HELP_FILES_130=66000
+HELP_FILES_110=66000
+
+[SourceDisksNames.amd64]
+1 = %DISK_NT_NAME%,,
+
+[SourceDisksFiles.amd64]
+hpltdrv7.dl_ = 1
+hpltume5.dl_ = 1
+hpltui5.dl_ = 1
+hpltumd5.dl_ = 1
+HPGLRL12.ch_ = 1
+HPGLRL11.ch_ = 1
+HPLTLNK2.EX_ = 1
+HPLTRPL9.EX_ = 1
+HPLTRPL10.DL_ = 1
+hpltren7.ex_ = 1
+hpltren8.dl_ = 1
+HPLTLM5.DL_  = 1
+hpdj130.da_ =1
+hpdj30.da_ =1
+hpdj110.da_ =1
+
+[strings]
+LANGMON="HP DesignJet ECP Monitor,HPLTLM5.DLL"
+DISK_95_NAME="HP DesignJet Driver v6.0 (HPGL2/RTL) for Windows 95/98 disk"
+DISK_NT_NAME="HP DesignJet Driver v6.0 (HPGL2/RTL) for Windows NT 4.0 disk"

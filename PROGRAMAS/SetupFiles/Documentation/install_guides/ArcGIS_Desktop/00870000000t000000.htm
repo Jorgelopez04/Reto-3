@@ -1,0 +1,44 @@
+<!DOCTYPE html><html lang="en" xml:lang="en"><head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="content-language" content="en"><link href="rsrc/htmlhelp.css" rel="stylesheet" type="text/css"><link href="rsrc/htmlhelp_simpletoc.css" rel="stylesheet" type="text/css"><title> Installing ArcGIS Desktop on a network server </title></head><!--Publication GUID: [GUID-406C45DC-78A6-44FF-B30B-B3DBE9C7D234]--><!--Topic GUID: [GUID-08DA5114-26C8-431B-A7FD-AD4F9D477CFE]--><body><div id="wrapper"><div class="pageheader"></div><div class="toc"><ol>
+<li class='toc-title toc-level1'><h3>Introduction</h3></li>
+<li class='toc-level1'><i>&#x02022;</i>&nbsp;<a href='008700000003000000.htm'>Introduction to installing and configuring ArcGIS Desktop</a></li>
+<li class='toc-level1'><i>&#x02022;</i>&nbsp;<a href='008700000006000000.htm'>Minimum System requirements</a></li>
+<li class='toc-level1'><i>&#x02022;</i>&nbsp;<a href='008700000007000000.htm'>Python Requirement</a></li>
+<li class='toc-level1'><i>&#x02022;</i>&nbsp;<a href='008700000005000000.htm'>Questions, feedback, and information</a></li>
+<li class='toc-title toc-level1'><h3>Preparing to install</h3></li>
+<li class='toc-level1'><i>&#x02022;</i>&nbsp;<a href='00870000005v000000.htm'>Authorizing your Software</a></li>
+<li class='toc-level1'><i>&#x02022;</i>&nbsp;<a href='00870000000m000000.htm'>Existing ArcGIS Desktop users</a></li>
+<li class='toc-title toc-level1'><h3>The license manager</h3></li>
+<li class='toc-level1'><i>&#x02022;</i>&nbsp;<a href='00870000000q000000.htm'>Installing the license manager</a></li>
+<li class='toc-level1'><i>&#x02022;</i>&nbsp;<a href='00870000000p000000.htm'>About the license manager</a></li>
+<li class='toc-title toc-level1'><h3>Installing ArcGIS Desktop</h3></li>
+<li class='toc-level1'><i>&#x02022;</i>&nbsp;<a href='00870000000r000000.htm'>Installation overview</a></li>
+<li class='toc-level1'><i>&#x02022;</i>&nbsp;<a href='00870000000s000000.htm'>Installing ArcGIS Desktop on your computer</a></li>
+<li class='toc-level1'><i>&#x02022;</i>&nbsp;<a href='00870000005w000000.htm'>Authorizing your software</a></li>
+<li class='toc-level1'><i>&#x02022;</i>&nbsp;<a href='008700000014000000.htm'>The ArcGIS Administrator</a></li>
+<li class='toc-level1'><i>&#x02022;</i>&nbsp;<a href='008700000068000000.htm'>Installing a localized ArcGIS Desktop setup</a></li>
+<li class='toc-level1'><i>&#x02022;</i>&nbsp;<a href='00870000000t000000.htm'>Installing ArcGIS Desktop on a network server</a></li>
+<li class='toc-level1'><i>&#x02022;</i>&nbsp;<a href='00870000000v000000.htm'>Installing ArcGIS Desktop from a network server</a></li>
+<li class='toc-level1'><i>&#x02022;</i>&nbsp;<a href='00870000000w000000.htm'>Installing ArcGIS Desktop silently</a></li>
+<li class='toc-title toc-level1'><h3>Adding additional installation components</h3></li>
+<li class='toc-level1'><i>&#x02022;</i>&nbsp;<a href='008700000010000000.htm'>Adding additional installation features</a></li>
+<li class='toc-level1'><i>&#x02022;</i>&nbsp;<a href='008700000011000000.htm'>Adding tutorial data</a></li>
+<li class='toc-level1'><i>&#x02022;</i>&nbsp;<a href='008700000012000000.htm'>Installing ArcGIS Desktop Developer Resources</a></li>
+<li class='toc-level1'><i>&#x02022;</i>&nbsp;<a href='008700000061000000.htm'>Installing the ArcGIS extensions</a></li>
+<li class='toc-level0'><i>&#x02022;</i>&nbsp;<a href='008700000015000000.htm'>Uninstalling ArcGIS Desktop</a></li>
+<li class='toc-level0'><i>&#x02022;</i>&nbsp;<a href='008700000063000000.htm'>Copyright information</a></li>
+</ol></div><div id="content"><div class="header"><h1> Installing ArcGIS Desktop on a network server </h1></div>
+    <p id="GUID-5C453B67-576E-4D08-B428-3F90629201C7">
+      <indexterm cid="2H2Z84"><indexterm cid="1fz8Iq"><indexterm cid="16oNFN"></indexterm></indexterm></indexterm>
+    </p>
+    <p id="GUID-4CE89C58-70A0-43B5-B7DC-14E64BFB0BEF">System administrators can install <span purpose="ph" varid="ArcGISforDesktop" translate="no">ArcGIS Desktop</span> on a network server to allow many users to install on their individual machines from this central location. The network server installation may also be used to deploy <span purpose="ph" varid="ArcGISforDesktop" translate="no">ArcGIS Desktop</span> to client machines. To assist you in deploying ArcGIS in your environment, a white paper is available with detailed information. You can locate the <i>ArcGIS Enterprise Deployment</i> white paper on the support site  available through <a target="_blank" class="xref" href="https://my.esri.com/" rel="https://my.esri.com/">My Esri</a>. </p>
+    <p id="GUID-311C3C13-D523-4224-871E-F5BADB2FA57E">The network server installation copies the <span purpose="ph" varid="ArcGISforDesktop" translate="no">ArcGIS Desktop</span> installation files to the central network server location. The software is not available to run on the network server machine. Users must run the setup program, setup.exe, from the network server on their individual machines to install <span purpose="ph" varid="ArcGISforDesktop" translate="no">ArcGIS Desktop</span>. To make other setups available—Tutorial Data, Data Interoperability, or any other required installations—copy the setup contents to the network server and inform your users of the location, or perform an administrative installation point for each of these resources.</p>
+    <div class="section1" id="GUID-35CF28C2-BBF1-4E11-873C-753F8136E691" purpose="section1"><h2> How to install <span purpose="ph" varid="ArcGISforDesktop" translate="no">ArcGIS Desktop</span> on a network server </h2><p id="GUID-40B8C7B9-D175-47AA-810C-F65F4A1E205E">
+        <ol purpose="ol" id="OL_6F5BFA57D9B04888AC70AC59DFE747CA">
+          <li purpose="li" id="LI_326F88FDE8E248669D2956FC616BCBAE">Make sure that your network server and client machines meet the <a class="xref" href="008700000006000000.htm" rel="008700000006000000.htm">minimum system requirements</a>.</li>
+          <li purpose="li" id="LI_00E67EC0202F40F5984D28370BF5DBCD">An administrative installation of <span purpose="ph" varid="ArcGISforDesktop" translate="no">ArcGIS Desktop</span> is performed using command line parameters. Run this command from the command line to install an administrative installation of <span purpose="ph" varid="ArcGISforDesktop" translate="no">ArcGIS Desktop</span>: <pre purpose="pre" id="GUID-99CE2506-CAC0-476C-B96E-9C21BB089955"><span class="usertext"> &lt;setup location&gt;\setup.exe /a /qb</span></pre><p id="GUID-568AFDA7-F8EB-4C4F-99D3-E78396146811">An additional command line parameter is available:</p><p id="GUID-EAD8D1FB-4ECB-4356-AC29-44ED5121EAB6">TARGETDIR=&lt;installation directory&gt; can be used to specify an installation location for the administrative installation files on the network server. The default location is <span class="usertext">C:\Program Files\ArcGIS</span>, which will be used if no TARGETDIR parameter is given.  The default location on a 64-bit operating system is <span class="usertext">C:\Program Files (x86)\ArcGIS</span>. </p><div class="notes" id="GUID-575313B6-707F-419D-B09A-70410CDEB661"><div class="note"><img class="note_img" src="rsrc/note.png" alt="Note" title="Note"><span>Note:</span></div><div class="tipbody"><p id="GUID-B37F56F7-0368-43D2-9A06-9022932D7A7E"><span class="usertext">/qb</span> provides the basic UI of progress status and error handling; <span class="usertext">/qn</span> provides no UI at all.</p></div></div></li>
+          <li purpose="li" id="LI_A485D979B84647E098B761CDED712D4E">Follow the instructions on the screen.</li>
+        </ol>
+      </p><p id="GUID-D26979F2-B511-4B46-8C2D-F684C276C029"><div class="notes" id="GUID-DCFBC84C-B34B-4C4A-BBC0-122DF8781B3A"><div class="note"><img class="note_img" src="rsrc/note.png" alt="Note" title="Note"><span>Note:</span></div><div class="tipbody"><p id="GUID-7095D20E-B5B5-4BDD-A034-535FCF104F71">  <span purpose="ph" varid="ArcGISforDesktop" translate="no">ArcGIS Desktop</span> requires Microsoft Visual C++ 2015-2019 Redistributable (x86) minimum version of 14.22.27821. If the Visual C++  Redistributable is not already installed, running setup.exe will install it before setup.msi is launched.  Setup.msi will not install if the Microsoft Visual C++ 2015-2019 Redistributable (x86) is not already installed. </p></div></div></p><p id="GUID-A124FFA4-F9FC-436F-BACB-47AC835D7F20">  Provide your users with the instructions available in <a class="xref" href="00870000000v000000.htm" rel="00870000000v000000.htm">Installing ArcGIS Desktop from a network server location</a>.</p></div>
+  <div class="footer"> Copyright © 1995-2019 Esri. All rights reserved. </div></div></div></body></html>

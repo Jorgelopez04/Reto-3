@@ -1,0 +1,15 @@
+Add to hosts
+
+127.0.0.1 lmlicenses.wip4.adobe.com
+127.0.0.1 lm.licenses.adobe.com
+127.0.0.1 na1r.services.adobe.com
+127.0.0.1 hlrcv.stage.adobe.com
+127.0.0.1 practivate.adobe.com
+127.0.0.1 activate.adobe.com
+127.0.0.1 genuine.adobe.com
+127.0.0.1 prod.adobegenuine.com
+
+
+Or block app in firewall.
+
+Apply fix.reg

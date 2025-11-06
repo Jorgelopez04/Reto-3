@@ -1,0 +1,321 @@
+<!DOCTYPE html><html lang="en" xml:lang="en"><head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="content-language" content="en"><link href="rsrc/htmlhelp.css" rel="stylesheet" type="text/css"><link href="rsrc/htmlhelp_simpletoc.css" rel="stylesheet" type="text/css"><title> Installing ArcGIS Desktop silently </title></head><!--Publication GUID: [GUID-406C45DC-78A6-44FF-B30B-B3DBE9C7D234]--><!--Topic GUID: [GUID-62CE9037-675F-4C91-8276-F1BC72820EC5]--><body><div id="wrapper"><div class="pageheader"></div><div class="toc"><ol>
+<li class='toc-title toc-level1'><h3>Introduction</h3></li>
+<li class='toc-level1'><i>&#x02022;</i>&nbsp;<a href='008700000003000000.htm'>Introduction to installing and configuring ArcGIS Desktop</a></li>
+<li class='toc-level1'><i>&#x02022;</i>&nbsp;<a href='008700000006000000.htm'>Minimum System requirements</a></li>
+<li class='toc-level1'><i>&#x02022;</i>&nbsp;<a href='008700000007000000.htm'>Python Requirement</a></li>
+<li class='toc-level1'><i>&#x02022;</i>&nbsp;<a href='008700000005000000.htm'>Questions, feedback, and information</a></li>
+<li class='toc-title toc-level1'><h3>Preparing to install</h3></li>
+<li class='toc-level1'><i>&#x02022;</i>&nbsp;<a href='00870000005v000000.htm'>Authorizing your Software</a></li>
+<li class='toc-level1'><i>&#x02022;</i>&nbsp;<a href='00870000000m000000.htm'>Existing ArcGIS Desktop users</a></li>
+<li class='toc-title toc-level1'><h3>The license manager</h3></li>
+<li class='toc-level1'><i>&#x02022;</i>&nbsp;<a href='00870000000q000000.htm'>Installing the license manager</a></li>
+<li class='toc-level1'><i>&#x02022;</i>&nbsp;<a href='00870000000p000000.htm'>About the license manager</a></li>
+<li class='toc-title toc-level1'><h3>Installing ArcGIS Desktop</h3></li>
+<li class='toc-level1'><i>&#x02022;</i>&nbsp;<a href='00870000000r000000.htm'>Installation overview</a></li>
+<li class='toc-level1'><i>&#x02022;</i>&nbsp;<a href='00870000000s000000.htm'>Installing ArcGIS Desktop on your computer</a></li>
+<li class='toc-level1'><i>&#x02022;</i>&nbsp;<a href='00870000005w000000.htm'>Authorizing your software</a></li>
+<li class='toc-level1'><i>&#x02022;</i>&nbsp;<a href='008700000014000000.htm'>The ArcGIS Administrator</a></li>
+<li class='toc-level1'><i>&#x02022;</i>&nbsp;<a href='008700000068000000.htm'>Installing a localized ArcGIS Desktop setup</a></li>
+<li class='toc-level1'><i>&#x02022;</i>&nbsp;<a href='00870000000t000000.htm'>Installing ArcGIS Desktop on a network server</a></li>
+<li class='toc-level1'><i>&#x02022;</i>&nbsp;<a href='00870000000v000000.htm'>Installing ArcGIS Desktop from a network server</a></li>
+<li class='toc-level1'><i>&#x02022;</i>&nbsp;<a href='00870000000w000000.htm'>Installing ArcGIS Desktop silently</a></li>
+<li class='toc-title toc-level1'><h3>Adding additional installation components</h3></li>
+<li class='toc-level1'><i>&#x02022;</i>&nbsp;<a href='008700000010000000.htm'>Adding additional installation features</a></li>
+<li class='toc-level1'><i>&#x02022;</i>&nbsp;<a href='008700000011000000.htm'>Adding tutorial data</a></li>
+<li class='toc-level1'><i>&#x02022;</i>&nbsp;<a href='008700000012000000.htm'>Installing ArcGIS Desktop Developer Resources</a></li>
+<li class='toc-level1'><i>&#x02022;</i>&nbsp;<a href='008700000061000000.htm'>Installing the ArcGIS extensions</a></li>
+<li class='toc-level0'><i>&#x02022;</i>&nbsp;<a href='008700000015000000.htm'>Uninstalling ArcGIS Desktop</a></li>
+<li class='toc-level0'><i>&#x02022;</i>&nbsp;<a href='008700000063000000.htm'>Copyright information</a></li>
+</ol></div><div id="content"><div class="header"><h1> Installing ArcGIS Desktop silently </h1></div>
+<div class="section1" id="GUID-6CA9DEFB-9F58-495C-9E00-9325928F1328" purpose="section1"><h2> </h2><p id="GUID-4F85156A-21A8-4CA4-8625-90FB4544391C"><indexterm cid="1qUxIu"><indexterm cid="1uB86Q"><indexterm cid="y2GeQ"></indexterm></indexterm></indexterm> <span purpose="ph" varid="ArcGISforDesktop" translate="no">ArcGIS Desktop</span> can be installed without a user interface (UI) by running the setup with Windows Installer command line parameters. </p><p id="GUID-D26979F2-B511-4B46-8C2D-F684C276C029"><div class="notes" id="GUID-DCFBC84C-B34B-4C4A-BBC0-122DF8781B3A"><div class="note"><img class="note_img" src="rsrc/note.png" alt="Note" title="Note"><span>Note:</span></div><div class="tipbody"><p id="GUID-7095D20E-B5B5-4BDD-A034-535FCF104F71">  <span purpose="ph" varid="ArcGISforDesktop" translate="no">ArcGIS Desktop</span> requires Microsoft Visual C++ 2015-2019 Redistributable (x86) minimum version 14.22.27821. If the Redistributable is not already installed, running setup.exe will install it and then launch setup.msi.  To run Setup.msi  (without running setup.exe) the  redistributable must already be installed. </p></div></div></p><p id="GUID-BC7C10C1-26EE-41A7-9174-492397829D5B">It is highly recommended that you include the ESRI_LICENSE_HOST, SOFTWARE_CLASS, SEAT_PREFERENCE, and DESKTOP_CONFIG command line parameters when installing silently where applicable to your installation. This will enable a user to install without UI interaction or having to complete the <span class="wintitle">ArcGIS Administrator Wizard</span>.</p><div class="section2" id="ESRI_SECTION2_24C9D5DAC85849D4B0977A2983BF9073" purpose="section2"><h3>Requirements</h3><p id="GUID-D38DA627-65D5-4E9E-9144-CFDD71CB6807">
+<ul purpose="ul" id="UL_1C7778CAF0A94D67A6C26574D92908A5">
+
+<li purpose="li" id="LI_9083CB5A1AD54DFEB937C1E3C7CF314B">All versions earlier than 10.3  must be uninstalled before you proceed with the silent installation. </li>
+</ul>
+</p></div><div class="section2" id="ESRI_SECTION2_5C6306D0C35647FFBAF0F0E22779D029" purpose="section2"><h3><span purpose="ph" varid="ArcGISforDesktop" translate="no">ArcGIS Desktop</span> installation command line parameters</h3><p id="GUID-4DCD0AEA-4DCC-4986-86D9-8AE045139C98">The following are the command line switches to execute the <span purpose="ph" varid="ArcGISforDesktop" translate="no">ArcGIS Desktop</span> setup directly. The parameters are case sensitive and should be used as defined below.</p><div class="block_table" id="TABLE_28536C941C464969B1BD837221868023" purpose="block_table"><span class="table_title"></span><table class="table"><colgroup width="1.52*"></colgroup><colgroup width="1.28*"></colgroup><colgroup width="1.27*"></colgroup><colgroup width="1.30*"></colgroup><tr purpose="thead"><th class="th" outputclass="" purpose="th" rowspan="1" colspan="1">
+<p id="GUID-5A0494EE-A35E-46FB-AD6A-0383CA6A3908">Parameter</p>
+</th><th class="th" outputclass="" purpose="th" rowspan="1" colspan="1">
+<p id="GUID-E2E627E4-47CF-4315-B0A6-543D3E84B759">Value</p>
+</th><th class="th" outputclass="" purpose="th" rowspan="1" colspan="1">
+<p id="GUID-07909AC3-3DF0-40D8-AD72-D8D634D7F09A">Required</p>
+</th><th class="th" outputclass="" purpose="th" rowspan="1" colspan="1">
+<p id="GUID-0B6CD91D-E58B-498F-9F3D-FDF2226F30CB">Description</p>
+</th></tr><tbody>
+<tr>
+<td outputclass="" purpose="entry" rowspan="1" colspan="1">
+<p id="GUID-81A6EDA7-9B06-443B-AF63-1B321FEC68DB">ESRI_LICENSE_HOST= </p>
+</td>
+<td outputclass="" purpose="entry" rowspan="1" colspan="1">
+<p id="GUID-46786360-CF42-411A-9FBA-AEA40554378E">License Manager</p>
+</td>
+
+<td outputclass="" purpose="entry" rowspan="1" colspan="1">
+<p id="GUID-166EADAE-1FCB-490F-A029-D558145DCA90">Yes for Concurrent Use</p>
+</td>
+<td outputclass="" purpose="entry" rowspan="1" colspan="1">
+<p id="GUID-75A444B9-FF1C-43D8-85DF-D0A2FFB98E97">Machine name of license manager. </p>
+</td>
+</tr>
+<tr>
+<td outputclass="" purpose="entry" rowspan="1" colspan="1">
+<p id="GUID-502B4E88-DE5F-4D92-B9AA-1E0B72CCD7CB">SOFTWARE_CLASS= </p>
+</td>
+<td outputclass="" purpose="entry" rowspan="1" colspan="1">
+<p id="GUID-3526B7A0-7307-4EFC-9272-C57CA63C78BF">Viewer</p>
+</td>
+
+<td outputclass="" purpose="entry" rowspan="1" colspan="1">
+<p id="GUID-FEF0A5AB-930C-471F-BE53-EE15BB739BAC">Yes</p>
+</td>
+<td outputclass="" purpose="entry" rowspan="1" colspan="1">
+<p id="GUID-2D49B5F4-23C4-45CD-A66A-8F2FF35E182A">Installs <span purpose="ph" varid="ArcGISforDesktop" translate="no">ArcGIS Desktop</span> as Basic (ArcView). </p>
+</td>
+</tr>
+<tr>
+<td outputclass="" purpose="entry" rowspan="1" colspan="1"></td>
+<td outputclass="" purpose="entry" rowspan="1" colspan="1">
+<p id="GUID-62B30F62-CABE-4C58-8C9C-855CB9C8A04E">Editor</p>
+</td>
+
+<td outputclass="" purpose="entry" rowspan="1" colspan="1"></td>
+<td outputclass="" purpose="entry" rowspan="1" colspan="1">
+<p id="GUID-19AAE137-09C6-4A0E-9A06-56572A6B2858">Installs <span purpose="ph" varid="ArcGISforDesktop" translate="no">ArcGIS Desktop</span> as Standard (ArcEditor). </p>
+</td>
+</tr>
+<tr>
+<td outputclass="" purpose="entry" rowspan="1" colspan="1"></td>
+<td outputclass="" purpose="entry" rowspan="1" colspan="1">
+<p id="GUID-90FF2C76-1B53-492B-A029-A7B11BBD5CE9">Professional</p>
+</td>
+
+<td outputclass="" purpose="entry" rowspan="1" colspan="1"></td>
+<td outputclass="" purpose="entry" rowspan="1" colspan="1">
+<p id="GUID-F0B4586C-CE97-4D67-ABCA-A52837AB931B">Installs <span purpose="ph" varid="ArcGISforDesktop" translate="no">ArcGIS Desktop</span> as Advanced (ArcInfo). </p>
+</td>
+</tr>
+<tr>
+<td outputclass="" purpose="entry" rowspan="1" colspan="1">
+<p id="GUID-C6DC2EC0-2F3B-435E-99D2-232189252400">SEAT_PREFERENCE=</p>
+</td>
+<td outputclass="" purpose="entry" rowspan="1" colspan="1">
+<p id="GUID-15E63636-8511-4AD8-8081-D10E4E25E711">Fixed</p>
+</td>
+
+<td outputclass="" purpose="entry" rowspan="1" colspan="1">
+<p id="GUID-5A166DD5-BC1B-4FE3-968E-047D363CCE82">Yes</p>
+</td>
+<td outputclass="" purpose="entry" rowspan="1" colspan="1">
+<p id="GUID-A9396A58-2324-4033-B2CF-4788624B33FE">Installs your ArcGIS software class as a Single Use seat.</p>
+</td>
+</tr>
+<tr>
+<td outputclass="" purpose="entry" rowspan="1" colspan="1"></td>
+<td outputclass="" purpose="entry" rowspan="1" colspan="1">
+<p id="GUID-03D8E7ED-7321-4A81-A543-9A0BCC609485">Float</p>
+</td>
+
+<td outputclass="" purpose="entry" rowspan="1" colspan="1">
+<p id="GUID-02E41F45-62C7-4C31-B92D-3A4E84523A84">Yes</p>
+</td>
+<td outputclass="" purpose="entry" rowspan="1" colspan="1">
+<p id="GUID-16837EDA-8FAA-4ED1-A255-D4642449B231">Installs your ArcGIS software class as a Concurrent Use seat.</p>
+</td>
+</tr>
+<tr>
+<td outputclass="" purpose="entry" rowspan="1" colspan="1">
+<p id="GUID-275799E2-5869-44CA-8A72-06163F1489F3">INSTALLDIR= </p>
+</td>
+<td outputclass="" purpose="entry" rowspan="1" colspan="1"></td>
+
+<td outputclass="" purpose="entry" rowspan="1" colspan="1">
+<p id="GUID-6003D157-A5A2-48CB-847E-CF55BB2D165B">No</p>
+</td>
+<td outputclass="" purpose="entry" rowspan="1" colspan="1">
+<p id="GUID-4CE68935-A758-4A4D-8966-42651B446100"><span purpose="ph" varid="ArcGISforDesktop" translate="no">ArcGIS Desktop</span> installation location. If not specified, the installation location is %System Drive%\Program Files\ArcGIS. </p>
+</td>
+</tr>
+<tr>
+<td outputclass="" purpose="entry" rowspan="1" colspan="1">
+<p id="GUID-25AED55E-B342-44F6-A8D8-7702391FDD3C">INSTALLDIR1=</p>
+</td>
+<td outputclass="" purpose="entry" rowspan="1" colspan="1"></td>
+
+<td outputclass="" purpose="entry" rowspan="1" colspan="1">
+<p id="GUID-387CB683-A50C-4FEF-AA06-07D869911B45">No</p>
+</td>
+<td outputclass="" purpose="entry" rowspan="1" colspan="1">
+<p id="GUID-E2278BBF-1873-4AF7-A822-C4A0DF3A7A9A">Python installation location. If this feature is required and the value is not specified, the default location is Python27 on local system drive. </p>
+</td>
+</tr><tr>
+<td outputclass="" purpose="entry" rowspan="1" colspan="1">
+<p id="GUID-B46F5725-9B3D-4B28-B50A-A9F1E184BAB7">DESKTOP_CONFIG=</p>
+</td>
+<td outputclass="" purpose="entry" rowspan="1" colspan="1">
+<p id="GUID-E9424B2B-6CD0-4C56-83C4-05E2A8631BA9">TRUE</p>
+</td>
+
+<td outputclass="" purpose="entry" rowspan="1" colspan="1">
+<p id="GUID-2A4A109B-3208-4330-A62D-31AF6041C51D">Yes (if you supply ESRI_LICENSE_HOST, SOFTWARE_CLASS, and SEAT_PREFERENCE on the command line)</p>
+</td>
+<td outputclass="" purpose="entry" rowspan="1" colspan="1">
+<p id="GUID-C320465F-8CF4-4A75-A407-E239E9EFA22A">Setting this parameter to TRUE will prevent <span class="wintitle">ArcGIS Administrator Wizard</span> from being launched automatically at the end of the setup. </p>
+</td>
+</tr><tr><td outputclass="" purpose="entry" rowspan="1" colspan="1"><p id="GUID-7FD6E47A-52F1-4615-A067-E1A6A3A5EFC2">BLOCKADDINS=</p></td><td outputclass="" purpose="entry" rowspan="1" colspan="1"><p id="GUID-30A52DF4-4C3C-4987-BC90-42880CDBEB92">#0</p></td><td outputclass="" purpose="entry" rowspan="1" colspan="1"><p id="GUID-34502A5F-9391-4593-8945-29605843FD53">No</p></td><td outputclass="" purpose="entry" rowspan="1" colspan="1"><p id="GUID-93EB1028-C9BE-46FE-BA9F-BE13C3F02518">Load all add-ins regardless of whether they have digital signatures.</p></td></tr><tr><td outputclass="" purpose="entry" rowspan="1" colspan="1"></td><td outputclass="" purpose="entry" rowspan="1" colspan="1"><p id="GUID-971FCF3F-F489-4EEA-80C3-F273EE1ACE58">#1</p></td><td outputclass="" purpose="entry" rowspan="1" colspan="1"><p id="GUID-92046ED3-9021-43D4-87C3-E071D9680F7D">No</p></td><td outputclass="" purpose="entry" rowspan="1" colspan="1"><p id="GUID-17BC7DB5-E18F-4D88-AC07-D37409790DF7">Only load and use add-ins that are digitally signed by a trusted certificate authority.</p></td></tr><tr><td outputclass="" purpose="entry" rowspan="1" colspan="1"></td><td outputclass="" purpose="entry" rowspan="1" colspan="1"><p id="GUID-DCA88A1F-C7BD-4369-A051-754334AA9967">#2</p></td><td outputclass="" purpose="entry" rowspan="1" colspan="1"><p id="GUID-835D6F12-4DE8-40B8-A24B-504786B660A6">No</p></td><td outputclass="" purpose="entry" rowspan="1" colspan="1"><p id="GUID-8902BB74-39AA-4B0C-B57A-6E2CE59D5412">Only load and use add-ins that have been published by Esri.</p></td></tr><tr><td outputclass="" purpose="entry" rowspan="1" colspan="1"></td><td outputclass="" purpose="entry" rowspan="1" colspan="1"><p id="GUID-708BC0A7-BD1D-4F38-B94E-5D2B10E54A53">#3</p></td><td outputclass="" purpose="entry" rowspan="1" colspan="1"><p id="GUID-8153D91E-0C65-42DA-B488-4D22F9862085">No</p></td><td outputclass="" purpose="entry" rowspan="1" colspan="1"><p id="GUID-1FD83513-50A0-4FF6-BB0F-F50D3411AA16">Only load add-ins from the administrator folders and all add-ins published by Esri. </p></td></tr><tr><td outputclass="" purpose="entry" rowspan="1" colspan="1"></td><td outputclass="" purpose="entry" rowspan="1" colspan="1"><p id="GUID-26573A46-B0C1-4A68-B997-E09F9C367474">#4</p></td><td outputclass="" purpose="entry" rowspan="1" colspan="1"><p id="GUID-9EAEF3DA-D23F-4AD7-ABC6-E137624CE411">No</p></td><td outputclass="" purpose="entry" rowspan="1" colspan="1"><p id="GUID-995B8AD1-4C32-4AB8-9729-C40FFCEE97B6">Do not load or execute add-ins in this application.</p></td></tr><tr><td outputclass="" purpose="entry" rowspan="1" colspan="1"><p id="GUID-F8357392-A553-49EB-8AD7-A7643FB962DE">ENABLEEUEI=</p></td><td outputclass="" purpose="entry" rowspan="1" colspan="1"><p id="GUID-AA35F68B-7790-4072-9998-97881CEB83A5">0</p></td><td outputclass="" purpose="entry" rowspan="1" colspan="1"><p id="GUID-7C51C91E-874E-4A7D-962C-5B1F22DFF6DB">No </p></td><td outputclass="" purpose="entry" rowspan="1" colspan="1"><p id="GUID-D39ABBB9-133A-4BE5-B2E0-4840600FD5D8">Do not enable participation in the Esri User Experience Improvement.</p></td></tr><tr><td outputclass="" purpose="entry" rowspan="1" colspan="1"></td><td outputclass="" purpose="entry" rowspan="1" colspan="1"><p id="GUID-4002C888-18A0-48D7-8962-A021DC7630DD">1 (1 is default) </p></td><td outputclass="" purpose="entry" rowspan="1" colspan="1"><p id="GUID-090540AF-16D6-40E2-810B-F441B70D489E">No </p></td><td outputclass="" purpose="entry" rowspan="1" colspan="1"><p id="GUID-2689D0BA-76C1-45F2-83A9-E497522DEFAA">Enable participation in the Esri User Experience Improvement.</p></td></tr><tr><td outputclass="" purpose="entry" rowspan="1" colspan="1"><p id="GUID-49977C7D-2DBE-4357-AC44-24729A937D0D">MODIFYFLEXDACL=</p></td><td outputclass="" purpose="entry" rowspan="1" colspan="1"><p id="GUID-4EC1A4F7-BFFB-491A-80C1-D77836E5D1EE">TRUE </p></td><td outputclass="" purpose="entry" rowspan="1" colspan="1"><p id="GUID-3FBCDD23-1241-4CC5-859C-4AB1E20F06C9">No</p></td><td outputclass="" purpose="entry" rowspan="1" colspan="1"><p id="GUID-7A4FB5CB-9F4F-4FB9-808D-20D855586F4D">The default value is FALSE. Enabling this property to TRUE alters the following permissions to allow management of the FlexNet anchor service by any user:</p>
+<p id="GUID-975E958D-F551-4A46-A92E-FEB557C66641">SERVICE_QUERY_CONFIG SERVICE_QUERY_STATUS SERVICE_ENUMERATE_DEPENDENTS  SERVICE_START
+ SERVICE_INTERROGATE SERVICE_USER_DEFINED_CONTROL 
+READ_CONTROL</p>
+</td></tr>
+
+</tbody><caption class="table_desc"></caption></table></div></div></div>
+<div class="section1" id="ESRI_SECTION1_BBE21A4F558B408B94E98E930E86747E" purpose="section1"><h2>How to perform a typical installation of <span purpose="ph" varid="ArcGISforDesktop" translate="no">ArcGIS Desktop</span> without user interaction</h2><p id="GUID-5B1F5DD0-A691-495E-B6F3-DD2536828868">Run this command from the command line to install <span purpose="ph" varid="ArcGISforDesktop" translate="no">ArcGIS Desktop</span> as Advanced Concurrent Use using the machine GIS as the license manager. This example will also install Python to D:\python27:</p><span class="usertext">&lt;setup staging location&gt;\setup.exe ESRI_LICENSE_HOST=GIS SOFTWARE_CLASS=Professional SEAT_PREFERENCE=Float DESKTOP_CONFIG=TRUE INSTALLDIR1=D:\python27 /qb</span><p id="GUID-568AFDA7-F8EB-4C4F-99D3-E78396146811">Additional command line parameters are available:</p><p id="GUID-EAD8D1FB-4ECB-4356-AC29-44ED5121EAB6">INSTALLDIR=&lt;installation directory&gt; can be used to specify an installation location. The default location is C:\Program Files\ArcGIS if no INSTALLDIR parameter is given.  If you are upgrading ; the INSTALLDIR parameter is not applicable, the installation location of the previous installation will be used.  INSTALLDIR1=&lt;installation directory&gt; can be used to specify an installation location for Python except on an upgrade. The default location for this feature is python27 on the local system drive.</p><p id="GUID-E73A7BAD-660D-429B-9B7A-F7691538D387">The following is an example of a client installation where an administrative installation exists on a server (\\machinename):</p><span class="usertext"> \\machinename\ArcGIS\setup.exe  INSTALLDIR=C:\ArcGIS ESRI_LICENSE_HOST=GIS SOFTWARE_CLASS=Professional SEAT_PREFERENCE=Float DESKTOP_CONFIG=TRUE /qb</span><div class="notes" id="GUID-F9BDEB7F-F7C1-4835-A20E-3EB413304852"><div class="note"><img class="note_img" src="rsrc/note.png" alt="Note" title="Note"><span>Note:</span></div><div class="tipbody">
+<p id="GUID-498D1BA2-C377-4AC8-8F90-579BFF38F258">/qb provides the basic UI of the progress status and error handling; /qn provides no UI at all.</p>
+
+</div></div></div>
+<div class="section1" id="ESRI_SECTION1_D871AE098E214B8A8A13F395848D87B6" purpose="section1"><h2>How to perform a complete installation of <span purpose="ph" varid="ArcGISforDesktop" translate="no">ArcGIS Desktop</span> silently</h2><p id="GUID-B8436BFE-7121-468E-B79B-AA11E32BCEE0">Run this command from the command line to install a Complete <span purpose="ph" varid="ArcGISforDesktop" translate="no">ArcGIS Desktop</span> Standard license level with the machine GIS as the license manager:</p><span class="usertext"> &lt;setup staging location&gt;\setup.exe ADDLOCAL=ALL ESRI_LICENSE_HOST=GIS SOFTWARE_CLASS=Editor SEAT_PREFERENCE=Float DESKTOP_CONFIG=TRUE /qb</span><p id="GUID-17B65F66-F194-4883-8518-2D5DE80C127C">An additional command line parameter is available:</p><p id="GUID-ED3D6524-F68B-4F57-8E80-CD5585AFF6E1">INSTALLDIR=&lt;installation directory&gt; if you do not want to install to the default location of C:\Program Files\ArcGIS.   If you are upgrading,  the INSTALLDIR parameter is not applicable, it will detect the installation location.</p><p id="GUID-01DDE5C6-62BC-4ACF-A082-E094E5D44258">For example</p><span class="usertext"> &lt;setup staging location&gt;\setup.exe INSTALLDIR=C:\ArcGIS ESRI_LICENSE_HOST=GIS SOFTWARE_CLASS=Editor SEAT_PREFERENCE=Float DESKTOP_CONFIG=TRUE /qb</span><div class="notes" id="GUID-DA187784-78A0-42D2-9B37-E4966B6C7A5E"><div class="note"><img class="note_img" src="rsrc/note.png" alt="Note" title="Note"><span>Note:</span></div><div class="tipbody">
+<p id="GUID-9578D90B-0DBB-471F-B6D2-337E9C44BFCB"> To specify the installation location for a silent administrative installation, the command line property is TARGETDIR rather than INSTALLDIR.</p>
+</div></div></div>
+<div class="section1" id="ESRI_SECTION1_D5B4AAC9E9084B1BB1C1195B1B3CE533" purpose="section1"><h2>How to perform a custom installation of <span purpose="ph" varid="ArcGISforDesktop" translate="no">ArcGIS Desktop</span> silently</h2><p id="GUID-B00DFEA7-FD4E-4D28-B452-AF935AE3EC02">Run this command from the command line to perform a custom <span purpose="ph" varid="ArcGISforDesktop" translate="no">ArcGIS Desktop</span> installation with the machine GIS as the license manager and the product type as professional:</p><span class="usertext">&lt;setup staging location&gt;\setup.exe /qb ADDLOCAL=&lt;feature1&gt;,&lt;feature2&gt;,.... ESRI_LICENSE_HOST=GIS SOFTWARE_CLASS=Professional SEAT_PREFERENCE=Float DESKTOP_CONFIG=TRUE /qb</span><p id="GUID-1D1F45D8-3E40-4909-86A8-76C505A67E82">To install <span purpose="ph" varid="ArcGISforDesktop" translate="no">ArcGIS Desktop</span> as a Single Use installation:</p><p id="GUID-B3EBA606-8D7F-44F4-AE61-D31F4F2CC84A"><span class="usertext">&lt;setup staging location&gt;\setup.exe /qb ADDLOCAL=&lt;feature1&gt;,&lt;feature2&gt;,.... SOFTWARE_CLASS=Professional SEAT_PREFERENCE=Fixed </span></p><div class="section2" id="ESRI_SECTION2_63EB7A7D7EE64833949C434A1850638A" purpose="section2"><h3> </h3><p id="GUID-262DEAD4-8F73-46BC-9B8D-3AA6CEC6A71B">Specify installation features as follows:</p><div class="block_table" id="TABLE_2EB816F584D6452EAA2FC2E4F72FF1C3" purpose="block_table"><span class="table_title"></span><table class="table"><colgroup width="*"></colgroup><tbody>
+<tr>
+<td outputclass="" purpose="entry" rowspan="1" colspan="1">
+<p id="GUID-57DE767F-E788-46B7-88C7-F766BBD1FC64"><b>ADDLOCAL feature</b> (Each feature name must be specified; for example, you cannot use ADDLOCAL=Applications to install all Application subfeatures.)</p>
+</td>
+</tr>
+<tr>
+<td outputclass="" purpose="entry" rowspan="1" colspan="1">
+<p id="GUID-3C4158FF-B5B2-473E-9DD4-6191694A9F44">
+<b>Applications </b>
+</p>
+</td>
+</tr>
+<tr>
+<td outputclass="" purpose="entry" rowspan="1" colspan="1">
+<p id="GUID-EDB9F32C-23D3-4402-84CD-1C4DA6446100">ArcMap </p>
+</td>
+</tr>
+<tr>
+<td outputclass="" purpose="entry" rowspan="1" colspan="1">
+<p id="GUID-36807EA2-47BC-447E-A951-7A76A19FA4A3">ArcCatalog</p>
+</td>
+</tr>
+
+<tr>
+<td outputclass="" purpose="entry" rowspan="1" colspan="1">
+<p id="GUID-CE7B93A3-9E66-4D33-B73A-CFCFF3FF83AB">
+<b>Miscellaneous features </b>
+</p>
+</td>
+</tr>
+<tr>
+<td outputclass="" purpose="entry" rowspan="1" colspan="1">
+<p id="GUID-4A74E3D1-8D0F-497E-81D4-180A17B4ADD0">Python </p>
+</td>
+</tr>
+
+<tr>
+<td outputclass="" purpose="entry" rowspan="1" colspan="1">
+<p id="GUID-EBC8C18E-806D-4A26-97FB-FA5D7B088567">
+<b>Extensions </b>
+</p>
+</td>
+</tr>
+<tr>
+<td outputclass="" purpose="entry" rowspan="1" colspan="1">
+<p id="GUID-56DE55BE-A368-4017-9F93-BCBD72AA3EBE">Ext_3D_Analyst </p>
+</td>
+</tr>
+<tr>
+<td outputclass="" purpose="entry" rowspan="1" colspan="1">
+<p id="GUID-B056BD98-F9C6-434E-BA0B-2F3AA59BD4A6">ArcScan </p>
+</td>
+</tr>
+<tr>
+<td outputclass="" purpose="entry" rowspan="1" colspan="1">
+<p id="GUID-EAE2FA1E-21B9-465A-AE44-35FF00387A5F">GeoStatisticalAnalyst </p>
+</td>
+</tr>
+
+
+<tr>
+<td outputclass="" purpose="entry" rowspan="1" colspan="1">
+<p id="GUID-FBCFE6E1-14DF-4563-B3D2-E0E642C12843">ArcMap_Publishing_Extension </p>
+</td>
+</tr>
+<tr>
+<td outputclass="" purpose="entry" rowspan="1" colspan="1">
+<p id="GUID-2F61124E-B476-4B81-9BD4-6275907FF036">SpatialAnalyst </p>
+</td>
+</tr>
+
+
+<tr>
+<td outputclass="" purpose="entry" rowspan="1" colspan="1">
+<p id="GUID-F5820B2F-66FB-4115-9085-A35F515D3A46">Schematics </p>
+</td>
+</tr>
+<tr>
+<td outputclass="" purpose="entry" rowspan="1" colspan="1">
+<p id="GUID-CD8EA8B1-A35F-4D5A-A205-6C44EC198C12">NetworkAnalyst </p>
+</td>
+</tr>
+<tr>
+<td outputclass="" purpose="entry" rowspan="1" colspan="1">
+<p id="GUID-45029E79-8E79-4650-BFBA-12EF9E63E63A">TrackingAnalyst </p>
+</td>
+</tr>
+</tbody><caption class="table_desc"></caption></table></div><div class="block_table" id="TABLE_685B02F016444B22835A2C9F9A85F30D" purpose="block_table"><span class="table_title"></span><table class="table"><colgroup width="*"></colgroup><tbody>
+<tr>
+<td outputclass="" purpose="entry" rowspan="1" colspan="1">
+<p id="GUID-99C41948-7ABA-411B-9481-EBC58124D406">
+<b>Styles </b>
+</p>
+</td>
+</tr>
+<tr>
+<td outputclass="" purpose="entry" rowspan="1" colspan="1">
+<p id="GUID-2BFA55B0-01BA-457B-85C4-E911C00B9E1B">CivicAndBusiness </p>
+</td>
+</tr>
+<tr>
+<td outputclass="" purpose="entry" rowspan="1" colspan="1">
+<p id="GUID-43E1A08D-424A-4008-9106-E5F185FCC1F1">NaturalResources </p>
+</td>
+</tr>
+<tr>
+<td outputclass="" purpose="entry" rowspan="1" colspan="1">
+<p id="GUID-84E43DD3-8FF1-4907-AAED-661A78EB1169">
+<b>Templates</b>
+</p>
+</td>
+</tr>
+<tr>
+<td outputclass="" purpose="entry" rowspan="1" colspan="1">
+<p id="GUID-39B86D6A-F0CB-4DEE-B1E2-7A6777F7180F">TemplateGeneral </p>
+</td>
+</tr>
+<tr>
+<td outputclass="" purpose="entry" rowspan="1" colspan="1">
+<p id="GUID-F9ABCEC1-CBD8-4C5C-84C7-35161C95F89D">TemplateIndustry </p>
+</td>
+</tr>
+<tr>
+<td outputclass="" purpose="entry" rowspan="1" colspan="1">
+<p id="GUID-28C3286D-7DDF-4ECD-A815-7B4C0BDC5351">TemplateWorld </p>
+</td>
+</tr>
+<tr>
+<td outputclass="" purpose="entry" rowspan="1" colspan="1">
+<p id="GUID-0EA49F01-75DE-4BF4-B1BC-A7F77D9751DF">TemplateUSA </p>
+</td>
+</tr>
+</tbody><caption class="table_desc"></caption></table></div><div class="notes" id="GUID-31F58358-2312-4B10-96B4-CCC842122259"><div class="note"><img class="note_img" src="rsrc/note.png" alt="Note" title="Note"><span>Note:</span></div><div class="tipbody">
+<p id="GUID-B0923292-D0A3-47E1-A286-02AB5C487BB7">
+<ul purpose="ul" id="UL_E718DF495AAF4B4680B0A1205294B2D2">
+<li purpose="li" id="LI_715C21066D534AE7A8CCD45D6E877630">All dependencies and relevant files will also be installed with the specified feature.</li>
+<li purpose="li" id="LI_82EA264C57754B3EA19718AE98CA108D">Feature names are case sensitive.</li>
+</ul>
+</p>
+</div></div></div></div>
+<div class="section1" id="ESRI_SECTION1_DB300963DA294A458B00115385F674A7" purpose="section1"><h2>How to perform an uninstallation of ArcGIS <span purpose="ph" varid="Version_10x" translate="no">10.8</span> for Desktop silently</h2><p id="GUID-AF1E5033-0D37-464A-982D-71242DEC3274">To uninstall a product silently, use the following Windows installer command:</p><span class="usertext">msiexec.exe /x &lt;{product code}&gt; /qb</span><p id="GUID-6CBC1E31-C977-4726-B1E9-FCF7C4ED1B4E">For example, to uninstall ArcGIS <span purpose="ph" varid="Version_10x" translate="no">10.8</span> for Desktop  silently, use the following command line:</p><span class="usertext">msiexec.exe /x {69262D87-3697-492B-ABED-765DDC15118B} /qb</span></div>
+<div class="footer"> Copyright © 1995-2019 Esri. All rights reserved. </div></div></div></body></html>
